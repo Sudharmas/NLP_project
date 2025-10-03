@@ -1,0 +1,34 @@
+# Core runtime deps
+fastapi==0.115.0
+uvicorn==0.30.6
+SQLAlchemy==2.0.34
+pydantic==2.9.2
+pydantic-settings==2.5.2
+starlette==0.38.5
+pyyaml==6.0.2
+cachetools==5.5.0
+rapidfuzz==3.9.5
+python-multipart==0.0.9
+aiofiles==24.1.0
+structlog==24.4.0
+orjson==3.10.7
+sqlparse==0.5.1
+httpx==0.27.2
+
+# Optional DB drivers (install as needed)
+psycopg2-binary==2.9.9; python_version < "3.13"
+pymysql==1.1.1
+aiosqlite==0.19.0
+
+# Dev/test
+tqdm==4.66.5
+pytest==8.3.2
+pytest-asyncio==0.24.0
+
+# Document ingestion (embeddings/vector store and parsers)
+langchain-community==0.2.12
+langchain-text-splitters==0.2.2
+chromadb==0.5.5
+sentence-transformers==2.2.2
+pdfplumber==0.11.0
+python-docx==0.8.11

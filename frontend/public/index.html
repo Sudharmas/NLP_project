@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLP Query Engine for Employee Data</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>NLP Query Engine</h1>
+    <div id="status"></div>
+  </header>
+
+  <main>
+    <section class="panel" id="connect-panel">
+      <h2>Connect Database</h2>
+      <input id="connStr" type="text" placeholder="e.g., sqlite:///./demo.db or postgresql://user:pass@host/db" />
+      <button id="btnConnect">Connect & Analyze</button>
+      <div id="connectMsg"></div>
+      <div>
+        <h3>Discovered Schema</h3>
+        <pre id="schemaView" class="scroll"></pre>
+      </div>
+    </section>
+
+    <section class="panel" id="upload-panel">
+      <h2>Upload Documents</h2>
+      <input id="fileInput" type="file" multiple />
+      <button id="btnUpload">Upload</button>
+      <div id="uploadMsg"></div>
+      <div>
+        <h3>Ingestion Status</h3>
+        <pre id="ingestStatus" class="scroll"></pre>
+      </div>
+    </section>
+
+    <section class="panel" id="query-panel">
+      <h2>Query</h2>
+      <input id="queryInput" type="text" placeholder="Ask a question, e.g., Average salary by department" />
+      <button id="btnQuery">Submit</button>
+      <select id="history"></select>
+      <div id="metrics"></div>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Demo app. No authentication. For evaluation only.</small>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
